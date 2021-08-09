@@ -18,7 +18,57 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            Car CarOne = new Car();
+            //Car CarTwo = new Car();
+            //Car CarThree = new Car();
 
+            CarLot CarList = new CarLot();
+            Console.WriteLine("CAR ONE");
+            Console.WriteLine("--------");
+
+            CarOne.Year = 2000;
+            CarOne.Make = "Toyota";
+            CarOne.Model = "Cambry";
+            CarOne.EngineNoise = "low";
+            CarOne.HornNoise = "loud";
+            CarOne.IsDrivable = true;
+            CarOne.MakeHornNoise("low");
+            CarOne.MakeEngineNoise(CarOne.EngineNoise);
+
+            Console.WriteLine("CAR TWO");
+            Console.WriteLine("--------");
+
+            Car CarTwo = new Car() { Year = 2003, Make = "Ford", Model = "Ranger", EngineNoise = "loud", HornNoise = "loud", IsDrivable = false };
+            CarTwo.MakeEngineNoise("loud");
+            CarTwo.MakeHornNoise("loud");
+
+
+            Console.WriteLine("CAR Three");
+            Console.WriteLine("--------");
+
+            Car CarThree = new Car(2010, "Honda", "Accord", "low", "loud");
+
+            /*Car CarThree = new Car()
+            {
+
+            };
+            */
+            //Car CarThree = new Car()
+
+            CarList.vehicles.Add(CarOne);
+            CarList.vehicles.Add(CarTwo);
+            CarList.vehicles.Add(CarThree);
+
+            
+            foreach (var vehicle in CarList.vehicles)
+            {
+                Console.WriteLine($"The car is {vehicle.Year } { vehicle.Make} { vehicle.Model}  engine noise - {vehicle.EngineNoise}   horn noise - {vehicle.HornNoise}   IsDrivable - {vehicle.IsDrivable}");
+            } 
+
+
+            //Console.WriteLine($"the car year is {CarOne.Year} ");
+            
+            //Console.WriteLine($"Car properties are {CarList.vehicles[0].Make}");
 
             //*************BONUS*************//
 
