@@ -8,7 +8,7 @@ namespace CarLotSimulator
     {
         public Car()
             {
-
+                CarLot.NumberOfCars += 1;
             }
         public Car(int year, string make, string model, string enginenoise, string hornnoise, bool isdrivable = true)
         {

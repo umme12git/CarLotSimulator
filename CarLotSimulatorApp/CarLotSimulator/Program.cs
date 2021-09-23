@@ -6,6 +6,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            
             //TODO
 
             //Create a seperate class file called Car
@@ -48,18 +49,13 @@ namespace CarLotSimulator
 
             Car CarThree = new Car(2010, "Honda", "Accord", "low", "loud");
 
-            /*Car CarThree = new Car()
-            {
-
-            };
-            */
-            //Car CarThree = new Car()
+           
 
             CarList.vehicles.Add(CarOne);
             CarList.vehicles.Add(CarTwo);
             CarList.vehicles.Add(CarThree);
 
-            
+            Console.WriteLine($"The number of cars in the lot is {CarLot.NumberOfCars}");
             foreach (var vehicle in CarList.vehicles)
             {
                 Console.WriteLine($"The car is {vehicle.Year } { vehicle.Make} { vehicle.Model}  engine noise - {vehicle.EngineNoise}   horn noise - {vehicle.HornNoise}   IsDrivable - {vehicle.IsDrivable}");
